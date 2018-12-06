@@ -39,7 +39,6 @@ class App extends CI_Controller {
 		$this->load->view('template/js');
 	}
 	public function load_login_js(){
-		$this->output->cache(6000);
 		header('Content-Type: application/javascript');
 		$this->load->view('template/login_js');
 	}

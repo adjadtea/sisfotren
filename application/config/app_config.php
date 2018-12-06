@@ -8,7 +8,7 @@ $config['client_address'] = 'Jln. Curug Topik No.90 RT/RW. 02/02, Desa Curug Kec
 $config['max_file_upload'] = 1024*1024*2.5;
 $config['ext_file_gambar'] = array('jpg','jpeg','png','gif');
 $config['upload_temp_dir'] = '/tmp/';
-$config['font_directory'] = '/home/peta/public_html/sisfo-akademik/assets/font/';
+$config['font_directory'] = FCPATH.'/assets/font/';
 $config['status_pegawai'] = array('1'=>'TETAP','2'=>'KONTRAK','3'=>'HARIAN');
 $config['jenjang_pendidikan'] = array('1'=>'SD','2'=>'SLTP','3'=>'SLTA','4'=>'S1','5'=>'S2','6'=>'S3');
 $config['jenis_alamat'] = array('1'=>'Alamat Tinggal Sekarang','2'=>'Alamat Orang Tua','3'=>'Alamat Keluarga Lainnya','4'=>'Alamat Lainnya');
