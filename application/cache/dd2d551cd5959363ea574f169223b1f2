@@ -1,0 +1,34 @@
+a:2:{s:6:"expire";i:1533979968;s:7:"headers";a:0:{}}ENDCI---><div id="isian_data_pegawai_alamat_keluarga"></div>
+<ul class="nav nav-tabs tab-nav-right">
+	<li role="presentation" class="active">
+		<a class="font-bold" href="#container_alamat" data-toggle="tab" aria-expanded="true"><i class="material-icons">home</i> Alamat</a>
+	</li>
+	<li role="presentation">
+		<a class="font-bold" href="#container_pasangan" data-toggle="tab" aria-expanded="true"><i class="material-icons">favorite_border</i> Pasangan</a>
+	</li>
+	<li role="presentation">
+		<a class="font-bold" href="#container_anak" data-toggle="tab" aria-expanded="true"><i class="material-icons">face</i> Anak</a>
+	</li>
+</ul>
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane active" id="container_alamat">container_alamat</div>
+	<div role="tabpanel" class="tab-pane" id="container_pasangan">container_pasangan</div>
+	<div role="tabpanel" class="tab-pane" id="container_anak">container_anak</div>
+</div>
+<div class="clearfix"></div>
+<script type="text/javascript">
+$(function(){
+	if(typeof app_data_pegawai_alamat == 'undefined' || $.app_data_pegawai_alamat == 'undefined'){
+		$.getScript('https://simwas.kemenag.go.id/~peta/sisfo-akademik/index.php/app_data_pegawai_alamat/load_js',function(){
+			$.app_data_pegawai_alamat = new app_data_pegawai_alamat('https://simwas.kemenag.go.id/~peta/sisfo-akademik/index.php/app_data_pegawai_alamat',{isian:'isian_data_pegawai_alamat_keluarga',parent_element:'tab_pegawai_keluarga'});
+			$.app_data_pegawai_alamat.load_data_alamat(2);
+			$.app_data_pegawai_alamat.load_data_pasangan(2);
+			$.app_data_pegawai_alamat.load_data_anak(2);
+		});
+	} else {
+		$.app_data_pegawai_alamat.load_data_alamat(2);
+		$.app_data_pegawai_alamat.load_data_pasangan(2);
+		$.app_data_pegawai_alamat.load_data_anak(2);
+	}
+});
+</script>
