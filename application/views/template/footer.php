@@ -36,11 +36,8 @@
 			'treegrid-bootstrap': 'js/treegrid/jquery.treegrid.bootstrap3.js',
 			'bootstrap-select': 'adminbsb/plugins/bootstrap-select/js/bootstrap-select.js',
 			'bootstrap-select-css': 'adminbsb/plugins/bootstrap-select/css/bootstrap-select.min.css',
-			/*'datatable': 'adminbsb/plugins/jquery-datatable/jquery.dataTables.js',*/
 			'datatable': 'https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js',
-			/*'datatable-css': 'adminbsb/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css',*/
 			'datatable-css': 'https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css',
-			/*'datatable-bootstrap': 'adminbsb/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.min.js',*/
 			'datatable-bootstrap': 'https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js',
 			'bootstrap-material-datetimepicker': 'adminbsb/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js',
 			'bootstrap-material-datetimepicker-css': 'adminbsb/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css',

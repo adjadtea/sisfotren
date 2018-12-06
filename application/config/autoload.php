@@ -95,9 +95,9 @@ $autoload['drivers'] = array();
 */
 $autoload['helper'] = array(
 	/* CI native helper */
-	'url','number',
+	'url','number','string',
 	/* custome helper */
-	'checksession','tglindonesia'
+	'checksession','tglindonesia','kuncikreator','minifyjs'
 	);
 
 /*

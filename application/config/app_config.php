@@ -2,6 +2,7 @@
 /* konfigurasi sistem dan client */
 defined('BASEPATH') OR exit('No direct script access allowed');
 $config['app_name'] = 'Sistem Informasi Pondok Pesantren';
+$config['app_name_sort'] = 'Sisfotren';
 $config['client_name'] = 'Pondok Pesantren Baitul Hikmah';
 $config['client_address'] = 'Jln. Curug Topik No.90 RT/RW. 02/02, Desa Curug Kec. Bojong Sari Kota Depok';
 /* konfigurasi reference aplikasi */

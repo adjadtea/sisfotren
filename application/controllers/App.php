@@ -39,8 +39,7 @@ class App extends CI_Controller {
 		$this->load->view('template/js');
 	}
 	public function load_login_js(){
-		header('Content-Type: application/javascript');
-		$this->load->view('template/login_js');
+		minifyjs('template/login.js');
 	}
 	public function index() {
 		parent::__construct();
@@ -74,12 +73,9 @@ class App extends CI_Controller {
 		}
 	}
 	public function create_captcha($vrand){
-		$string = '';
-		for ($i = 0; $i < 6; $i++) {
-			$string .= (mt_rand(0, 9));
-		}
+		$string = random_string('numeric',7);
 		$this->session->set_userdata('random_number',$string);
-		$image = imagecreatetruecolor(150, 55);
+		$image = imagecreatetruecolor(160, 55);
 		// random number 1 or 2
 		$num = rand(1,6);
 		switch($num){
@@ -171,5 +167,14 @@ class App extends CI_Controller {
 	public function logout(){
 		$this->session->sess_destroy();
 		redirect(base_url());
+	}
+	public function ubah_admin_pass($text){
+		$arModel = array('m_user');
+		$this->load->model($arModel);
+		$realPassword = create_password($text);
+		$arData = array(
+			'password'=>$realPassword
+		);
+		$this->m_user->update($arData,1);
 	}
 }
