@@ -168,7 +168,7 @@ class App extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect(base_url());
 	}
-	public function ubah_admin_pass($text){
+	/*public function ubah_admin_pass($text){
 		$arModel = array('m_user');
 		$this->load->model($arModel);
 		$realPassword = create_password($text);
@@ -176,5 +176,5 @@ class App extends CI_Controller {
 			'password'=>$realPassword
 		);
 		$this->m_user->update($arData,1);
-	}
+	}*/
 }

@@ -10,12 +10,13 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<title><?php echo $this->config->item('client_name')?> | <?php echo $this->config->item('app_name')?></title>
 	<link rel="icon" href="<?=base_url('assets/adminbsb/images/logos.png')?>">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 	<link href="<?=base_url('assets/css/normalize.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/adminbsb/css/roboto.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/adminbsb/plugins/material-icons/material-icons.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/adminbsb/plugins/material-design-iconic-font/css/material-design-iconic-font.min.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/adminbsb/plugins/animate-css/animate.css')?>" rel="stylesheet" />
 	<link href="<?=base_url('assets/adminbsb/plugins/bootstrap/css/bootstrap.css')?>" rel="stylesheet">
 	<link href="<?=base_url('assets/adminbsb/plugins/waves/waves.min.css')?>" rel="stylesheet" />
-	<link href="<?=base_url('assets/adminbsb/plugins/animate-css/animate.css')?>" rel="stylesheet" />
 	<link href="<?=base_url('assets/js/waitme/waitMe.min.css')?>" rel="stylesheet" />
 	<link href="<?=base_url('assets/adminbsb/css/materialize.css')?>" rel="stylesheet" />
 	<link href="<?=base_url('assets/adminbsb/css/style.min.css')?>" rel="stylesheet">
