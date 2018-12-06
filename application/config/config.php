@@ -137,7 +137,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = FCPATH.'/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -325,7 +325,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'AdjadGanteng:-)';
+$config['encryption_key'] = '';
 
 /*
 |--------------------------------------------------------------------------
