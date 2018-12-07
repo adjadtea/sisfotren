@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class App_data_pegawai_alamat extends CI_Controller {
+class Alamat extends CI_Controller {
 	private $pegawai_id;
 	private $otoritas;
 	private $username;
