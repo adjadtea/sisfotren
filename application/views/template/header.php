@@ -3,11 +3,9 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-	<link href="<?=base_url('assets/css/normalize.min.css')?>" rel="stylesheet">
 	<title><?=$this->config->item('client_name')?> | <?=$this->config->item('app_name')?></title>
+	<link href="<?=base_url('assets/css/normalize.min.css')?>" rel="stylesheet">
 	<link rel="icon" href="<?=base_url('assets/adminbsb/images/logos.png')?>">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css"/>
 	<link href="<?=base_url('assets/adminbsb/plugins/bootstrap/css/bootstrap.css')?>" rel="stylesheet">
 	<link href="<?=base_url('assets/adminbsb/css/style.min.css')?>" rel="stylesheet">
 	<link href="<?=base_url('assets/adminbsb/css/themes/all-themes.css')?>" rel="stylesheet">

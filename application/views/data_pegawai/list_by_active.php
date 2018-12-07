@@ -34,12 +34,6 @@
 </table>
 <script type="text/javascript">
 $(function(){
-	seajs.use(['datatable-css','datatable'],function(){
-		seajs.use('datatable-bootstrap',function(){
-			$('#tbl_data_pegawai_<?=$status_kerja?>').dataTable({
-				"sort": false
-			});
-		});
-	});
+	$('#tbl_data_pegawai_<?=$status_kerja?>').dataTable();
 });
 </script>

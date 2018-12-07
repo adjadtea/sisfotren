@@ -50,15 +50,13 @@
 <script type="text/javascript">
 $(function(){
 	$.app_sekolah.validasi_add_tahun_ajaran('frmAddTahunAjaran');
-	seajs.use(['bootstrap-material-datetimepicker-css','bootstrap-material-datetimepicker'],function(){
-		$('#txtTglMulai').bootstrapMaterialDatePicker({
-			format:'YYYY-MM-DD',
-			time: false
-		});
-		$('#txtTglSelesai').bootstrapMaterialDatePicker({
-			format:'YYYY-MM-DD',
-			time: false
-		});
+	$('#txtTglMulai').bootstrapMaterialDatePicker({
+		format:'YYYY-MM-DD',
+		time: false
+	});
+	$('#txtTglSelesai').bootstrapMaterialDatePicker({
+		format:'YYYY-MM-DD',
+		time: false
 	});
 });
 </script>

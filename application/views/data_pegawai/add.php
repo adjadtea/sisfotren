@@ -118,15 +118,13 @@ $(function(){
 		}
 		$('#'+$.<?=$this->router->fetch_class()?>.jsonParam.isian).empty();
 	});
-	seajs.use(['bootstrap-material-datetimepicker-css','bootstrap-material-datetimepicker'],function(){
-		$('#txtTglLahir').bootstrapMaterialDatePicker({
-			format:'YYYY-MM-DD',
-			time: false
-		});
-		$('#txtMulaiKerja').bootstrapMaterialDatePicker({
-			format:'YYYY-MM-DD',
-			time: false
-		});
+	$('#txtTglLahir').bootstrapMaterialDatePicker({
+		format:'YYYY-MM-DD',
+		time: false
+	});
+	$('#txtMulaiKerja').bootstrapMaterialDatePicker({
+		format:'YYYY-MM-DD',
+		time: false
 	});
 	$.<?=$this->router->fetch_class()?>.validasi('frmAddDatapegawai','dlgAddDataPegawai');
 });

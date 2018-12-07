@@ -1,66 +1,74 @@
-	<script src="<?=base_url('assets/seajs/sea.js')?>"></script>
-	<script src="<?=base_url('assets/seajs/seajs-css.js')?>"></script>
+	<script src="<?=base_url('assets/js/load.js')?>"></script>
 	<script type="text/javascript">
 	var _alert;
-	seajs.config({
-		base: '<?=base_url('assets')?>/',
-		alias: {
-			'jquery': 'adminbsb/plugins/jquery/jquery.min.js',
-			'animate-css': 'adminbsb/plugins/animate-css/animate.min.css',
-			'jquery-form': 'js/jquery.form.min.js',
-			'jquery-countto': 'adminbsb/plugins/jquery-countto/jquery.countTo.js',
-			'jquery-slimscroll': 'adminbsb/plugins/jquery-slimscroll/jquery.slimscroll.js',
-			'jquery-validation': 'adminbsb/plugins/jquery-validation/jquery.validate.js',
-			'jquery-validation-additional': 'adminbsb/plugins/jquery-validation/additional-methods.js',
-			'jquery-validation-id': 'adminbsb/plugins/jquery-validation/localization/messages_id.js',
-			'jquery-number': 'js/jquery.number.min.js',
-			'bootstrap': 'adminbsb/plugins/bootstrap/js/bootstrap.js',
-			'pform': 'css/pform.css',
-			'pform-bootstrap': 'css/pform-bootstrap.css',
-			'sweetalert': 'js/sweetalert.min.js',
-			'monthly-css': 'js/monthly/monthly.css',
-			'monthly': 'js/monthly/monthly.js',
-			'notify': 'js/notify.min.js',
-			'moment': 'js/moment.min.js',
-			'sammy': 'js/sammy/sammy-0.7.6.min.js',
-			'stapes': 'js/stapes.min.js',
-			'mockjax': 'js/jquery.mockjax.min.js',
-			'lodash': 'js/lodash.min.js',
-			'pdfobject': 'js/pdfobject.min.js',
-			'waves-css': 'adminbsb/plugins/waves/waves.min.css',
-			'waves': 'adminbsb/plugins/waves/waves.min.js',
-			'waitme-css': 'js/waitme/waitMe.min.css',
-			'waitme': 'js/waitme/waitMe.min.js',
-			'treegrid-css': 'js/treegrid/jquery.treegrid.css',
-			'treegrid': 'js/treegrid/jquery.treegrid.js',
-			'treegrid-bootstrap': 'js/treegrid/jquery.treegrid.bootstrap3.js',
-			'bootstrap-select': 'adminbsb/plugins/bootstrap-select/js/bootstrap-select.js',
-			'bootstrap-select-css': 'adminbsb/plugins/bootstrap-select/css/bootstrap-select.min.css',
-			'datatable': 'https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js',
-			'datatable-css': 'https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css',
-			'datatable-bootstrap': 'https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js',
-			'bootstrap-material-datetimepicker': 'adminbsb/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js',
-			'bootstrap-material-datetimepicker-css': 'adminbsb/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css',
-			'dropzone': 'adminbsb/plugins/dropzone/min/dropzone.min.js',
-			'dropzone-css': 'adminbsb/plugins/dropzone/min/dropzone.min.css',
-			'bootstrap-fileinput': 'js/bootstrap-fileinput/js/fileinput.min.js',
-			'bootstrap-fileinput-css': 'js/bootstrap-fileinput/css/fileinput.min.css',
-			'bootstrap-year-calendar': 'js/bootstrap-year-calendar/bootstrap-year-calendar.min.js',
-			'bootstrap-year-calendar-css': 'js/bootstrap-year-calendar/bootstrap-year-calendar.min.css',
-			/* alias untuk aplikasi */
-			'app_kelas': 'app/app_kelas.js',
-		}
-	});
-	seajs.use(['jquery','moment','stapes','animate-css'],function(){
-		$(function(){
-			$.getScript('<?=site_url('app/load_js')?>',function(){
+	function load_all_js(){
+		return Promise.all([
+			load.css('<?=base_url('assets/adminbsb/plugins/animate-css/animate.min.css')?>'),
+			load.css('<?=base_url('assets/adminbsb/plugins/material-icons/material-icons.css')?>'),
+			load.css('<?=base_url('assets/adminbsb/plugins/material-design-iconic-font/css/material-design-iconic-font.min.css')?>'),
+			
+			load.js('<?=base_url('assets/js/axios.min.js')?>'),
+			load.js('<?=base_url('assets/js/moment.min.js')?>'),
+			load.js('<?=base_url('assets/js/lodash.min.js')?>'),
+			load.js('<?=base_url('assets/js/stapes.min.js')?>'),
+			load.js('<?=base_url('assets/js/hammer.min.js')?>'),
+			load.js('<?=base_url('assets/js/web-animations.min.js')?>'),
+			load.js('<?=base_url('assets/js/muuri.min.js')?>'),
+			load.js('<?=base_url('assets/js/pdfobject.min.js')?>'),
+			load.js('<?=base_url('assets/adminbsb/plugins/jquery/jquery.min.js')?>').then(()=>{
+				load.css('https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css');
+				load.js('https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js');
+				
+				load.css('<?=base_url('assets/js/monthly/monthly.css')?>');
+				load.js('<?=base_url('assets/js/monthly/monthly.js')?>');
+				
+				load.js('<?=base_url('assets/js/jquery.form.min.js')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/jquery-countto/jquery.countTo.js')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/jquery-slimscroll/jquery.slimscroll.js')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/jquery-validation/jquery.validate.js')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/jquery-validation/additional-methods.js')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/jquery-validation/localization/messages_id.js')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/bootstrap/js/bootstrap.js')?>').then(()=>{
+					load.css('<?=base_url('assets/adminbsb/plugins/bootstrap-select/css/bootstrap-select.min.css')?>');
+					load.js('<?=base_url('assets/adminbsb/plugins/bootstrap-select/js/bootstrap-select.js')?>');
+					
+					load.css('<?=base_url('assets/adminbsb/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')?>');
+					load.js('<?=base_url('assets/adminbsb/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')?>');
+					
+					load.css('<?=base_url('assets/js/bootstrap-fileinput/css/fileinput.min.css')?>');
+					load.js('<?=base_url('assets/js/bootstrap-fileinput/js/fileinput.min.js')?>');
+					load.js('<?=base_url('assets/adminbsb/plugins/dropzone/min/dropzone.min.js')?>');
+					
+					load.css('<?=base_url('assets/js/bootstrap-year-calendar/bootstrap-year-calendar.min.css')?>');
+					load.js('<?=base_url('assets/js/bootstrap-year-calendar/bootstrap-year-calendar.min.js')?>');
+				});
+				load.js('<?=base_url('assets/js/jquery.number.min.js')?>');
+				load.js('<?=base_url('assets/js/sammy/sammy-0.7.6.min.js')?>');
+				load.js('<?=base_url('assets/js/sweetalert.min.js')?>');
+				load.js('<?=base_url('assets/js/jquery.mockjax.min.js')?>');
+				load.js('<?=base_url('assets/js/notify.min.js')?>');
+				load.css('<?=base_url('assets/js/treegrid/jquery.treegrid.css')?>');
+				load.js('<?=base_url('assets/js/treegrid/jquery.treegrid.js')?>').then(()=>{
+					load.js('<?=base_url('assets/js/treegrid/jquery.treegrid.bootstrap3.js')?>');
+				});
+				
+				load.css('<?=base_url('assets/adminbsb/plugins/waves/waves.min.css')?>');
+				load.js('<?=base_url('assets/adminbsb/plugins/waves/waves.min.js')?>');
+				
+				load.css('<?=base_url('assets/js/waitme/waitMe.min.css')?>');
+				load.js('<?=base_url('assets/js/waitme/waitMe.min.js')?>');
+			}),
+		]);
+	}
+	(function(){
+		load_all_js().then(()=>{
+			load.js('<?=site_url('app/load_js')?>').then(()=>{
 				$.app = new App('<?=base_url()?>','<?=site_url()?>');
-			});
-			seajs.use(['jquery-countto','bootstrap','waves-css','waves','jquery-form','jquery-validation','jquery-validation-additional'],function(){
-				$.getScript('<?=base_url('assets/adminbsb/js/admin.min.js')?>');
+				load.js('<?=base_url('assets/adminbsb/js/admin.min.js')?>');
+				load.js('<?=base_url('assets/app/app_kelas.js')?>');
 			});
 		});
-	});
+	})();
 	</script>
 </body>
 </html>

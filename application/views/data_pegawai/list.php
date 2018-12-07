@@ -39,9 +39,11 @@
 </div>
 <script type="text/javascript">
 $(function(){
-	var site_url = '<?=site_url()?>', controller = '<?=$this->router->fetch_class()?>',site_controller = site_url+'/'+controller+'/load_js';
+	var site_url = '<?=site_url()?>',
+		controller = '<?=$this->router->fetch_class()?>',
+		site_controller = site_url+'/'+controller+'/load_js';
 	if(typeof <?=$this->router->fetch_class()?> == 'undefined' || $.<?=$this->router->fetch_class()?> == 'undefined'){
-		$.getScript(site_controller,function(){
+		load.js(site_controller).then(()=>{
 			$.<?=$this->router->fetch_class()?> = new <?=$this->router->fetch_class()?>('<?=site_url($this->router->fetch_class())?>',{isian:'isian_data_pegawai'});
 			$.<?=$this->router->fetch_class()?>.load_data_pegawai(1);
 			$.<?=$this->router->fetch_class()?>.load_data_pegawai(2);

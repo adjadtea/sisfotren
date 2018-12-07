@@ -47,68 +47,64 @@ var <?=$this->router->fetch_class()?> = App.subclass({
 	},
 	validasi:function(frmId,dlgModal){
 		var that = this;
-		seajs.use(['jquery-validation','jquery-validation-additional','jquery-form'],function(){
-			$('#'+frmId).validate({
-				rules:{
-					txtNama:{
-						required:true
-					},
-					txtTmptLahir:{
-						required:true
-					},
-					txtTglLahir:{
-						required:true
-					},
-					txtMulaiKerja:{
-						required:true
-					},
-					txtEmail:{
-						required:true,email:true
-					},
-					txtTlp:{
-						required:true
-					},
+		$('#'+frmId).validate({
+			rules:{
+				txtNama:{
+					required:true
 				},
-				messages:{
-					txtNama:{
-						required:'Nama Masih Kosong'
-					},
-					txtTmptLahir:{
-						required:'Tempat Lahir Masih Kosong'
-					},
-					txtTglLahir:{
-						required:'Tgl. Lahir Masih Kosong'
-					},
-					txtMulaiKerja:{
-						required:'Tgl Mulai Kerja Masih Kosong'
-					},
-					txtEmail:{
-						required:'Email Masih Kosong',
-						email:'Format Email Tidak Sesuai',
-					},
-					txtTlp:{
-						required:'Telepone/HP Masih Kosong'
-					},
+				txtTmptLahir:{
+					required:true
 				},
-				submitHandler:function(){
-					$.app.tunggu(frmId,1);
-					that.submit_form(frmId,dlgModal);
-				}
-			});
+				txtTglLahir:{
+					required:true
+				},
+				txtMulaiKerja:{
+					required:true
+				},
+				txtEmail:{
+					required:true,email:true
+				},
+				txtTlp:{
+					required:true
+				},
+			},
+			messages:{
+				txtNama:{
+					required:'Nama Masih Kosong'
+				},
+				txtTmptLahir:{
+					required:'Tempat Lahir Masih Kosong'
+				},
+				txtTglLahir:{
+					required:'Tgl. Lahir Masih Kosong'
+				},
+				txtMulaiKerja:{
+					required:'Tgl Mulai Kerja Masih Kosong'
+				},
+				txtEmail:{
+					required:'Email Masih Kosong',
+					email:'Format Email Tidak Sesuai',
+				},
+				txtTlp:{
+					required:'Telepone/HP Masih Kosong'
+				},
+			},
+			submitHandler:function(){
+				$.app.tunggu(frmId,1);
+				that.submit_form(frmId,dlgModal);
+			}
 		});
 	},
 	upload_photo_santri:function(santri_id,form_id){
 		var that = this;
 		$.app.tunggu(form_id,1);
-		seajs.use('jquery-form',function(){
-			$('#'+form_id).ajaxSubmit({
-				url:that.site_url+'/upload_gmbr_siswa/'+santri_id,
-				success:function(){
-					$.app.tunggu(form_id,0);
-					$.app.myalert("Photo Berhasil Diupload",'success');
-					that.open_detail_2x(santri_id);
-				}
-			});
+		$('#'+form_id).ajaxSubmit({
+			url:that.site_url+'/upload_gmbr_siswa/'+santri_id,
+			success:function(){
+				$.app.tunggu(form_id,0);
+				$.app.myalert("Photo Berhasil Diupload",'success');
+				that.open_detail_2x(santri_id);
+			}
 		});
 		return false;
 	}

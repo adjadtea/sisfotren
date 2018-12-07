@@ -50,7 +50,7 @@
 <script type="text/javascript">
 $(function(){
 	if(typeof <?=$this->router->fetch_class()?> == 'undefined' || $.<?=$this->router->fetch_class()?> == 'undefined'){
-		$.getScript('<?=site_url($this->router->fetch_class().'/load_js')?>',function(){
+		load.js('<?=site_url($this->router->fetch_class().'/load_js')?>').then(function(){
 			$.<?=$this->router->fetch_class()?> = new <?=$this->router->fetch_class()?>('<?=site_url($this->router->fetch_class())?>',{isian:'isian_data_santri'});
 			$.<?=$this->router->fetch_class()?>.load_table_by_status(0);
 			$.<?=$this->router->fetch_class()?>.load_table_by_status(1);

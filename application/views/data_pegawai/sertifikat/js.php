@@ -37,16 +37,14 @@ var <?=$this->router->fetch_class()?> = App.subclass({
 		});
 	},
 	submit_form:function(frmId,dlgModal){
-		seajs.use('jquery-form',function(){
-			$.app.tunggu(dlgModal,1);
-			$('#'+frmId).ajaxSubmit({
-				success:function(responseText, statusText, xhr, $form){
-					$.app.myalert("Data Berhasil Diproses",'success');
-					$.app.tunggu(dlgModal,0);
-					is_clicked = 1;
-					$('#'+dlgModal).modal('hide');
-				}
-			});
+		$.app.tunggu(dlgModal,1);
+		$('#'+frmId).ajaxSubmit({
+			success:function(responseText, statusText, xhr, $form){
+				$.app.myalert("Data Berhasil Diproses",'success');
+				$.app.tunggu(dlgModal,0);
+				is_clicked = 1;
+				$('#'+dlgModal).modal('hide');
+			}
 		});
 		return false;
 	},

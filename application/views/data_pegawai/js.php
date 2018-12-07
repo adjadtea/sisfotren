@@ -46,85 +46,79 @@ var <?=$this->router->fetch_class()?> = App.subclass({
 	},
 	submit_form_upload:function(frmId,pegawai_id){
 		var that = this;
-		seajs.use('jquery-form',function(){
-			$('#'+frmId).ajaxSubmit({
-				success:function(responseText, statusText, xhr, $form){
-					$.app.myalert("Data Berhasil Diproses",'success');
-					that.open_detail_2x(pegawai_id);
-				}
-			});
+		$('#'+frmId).ajaxSubmit({
+			success:function(responseText, statusText, xhr, $form){
+				$.app.myalert("Data Berhasil Diproses",'success');
+				that.open_detail_2x(pegawai_id);
+			}
 		});
 		return false;
 	},
 	validasi_upload:function(frmId,pegawai_id){
 		var that = this;
-		seajs.use(['jquery-validation','jquery-validation-additional'],function(){
-			$('#'+frmId).validate({
-				rules:{
-					file_upload_photo_pegawai:{
-						required:true
-					},
+		$('#'+frmId).validate({
+			rules:{
+				file_upload_photo_pegawai:{
+					required:true
 				},
-				messages:{
-					file_upload_photo_pegawai:{
-						required:'File Masih Kosong'
-					},
+			},
+			messages:{
+				file_upload_photo_pegawai:{
+					required:'File Masih Kosong'
 				},
-				submitHandler:function(){
-					that.submit_form_upload(pegawai_id);
-				}
-			});
+			},
+			submitHandler:function(){
+				that.submit_form_upload(pegawai_id);
+			}
 		});
 	},
 	validasi:function(frmId,dlgModal){
 		var that = this;
-		seajs.use(['jquery-validation','jquery-validation-additional'],function(){
-			$('#'+frmId).validate({
-				rules:{
-					txtNama:{
-						required:true
-					},
-					txtTmptLahir:{
-						required:true
-					},
-					txtTglLahir:{
-						required:true
-					},
-					txtMulaiKerja:{
-						required:true
-					},
-					txtEmail:{
-						required:true,email:true
-					},
-					txtTlp:{
-						required:true
-					},
+		$('#'+frmId).validate({
+			rules:{
+				txtNama:{
+					required:true
 				},
-				messages:{
-					txtNama:{
-						required:'Nama Masih Kosong'
-					},
-					txtTmptLahir:{
-						required:'Tempat Lahir Masih Kosong'
-					},
-					txtTglLahir:{
-						required:'Tgl. Lahir Masih Kosong'
-					},
-					txtMulaiKerja:{
-						required:'Tgl Mulai Kerja Masih Kosong'
-					},
-					txtEmail:{
-						required:'Email Masih Kosong',
-						email:'Format Email Tidak Sesuai',
-					},
-					txtTlp:{
-						required:'Telepone/HP Masih Kosong'
-					},
+				txtTmptLahir:{
+					required:true
 				},
-				submitHandler:function(){
-					$.app.submit_form(frmId,dlgModal);
-				}
-			});
+				txtTglLahir:{
+					required:true
+				},
+				txtMulaiKerja:{
+					required:true
+				},
+				txtEmail:{
+					required:true,email:true
+				},
+				txtTlp:{
+					required:true
+				},
+			},
+			messages:{
+				txtNama:{
+					required:'Nama Masih Kosong'
+				},
+				txtTmptLahir:{
+					required:'Tempat Lahir Masih Kosong'
+				},
+				txtTglLahir:{
+					required:'Tgl. Lahir Masih Kosong'
+				},
+				txtMulaiKerja:{
+					required:'Tgl Mulai Kerja Masih Kosong'
+				},
+				txtEmail:{
+					required:'Email Masih Kosong',
+					email:'Format Email Tidak Sesuai',
+				},
+				txtTlp:{
+					required:'Telepone/HP Masih Kosong'
+				},
+			},
+			submitHandler:function(){
+				$.app.submit_form(frmId,dlgModal);
+			}
 		});
 	},
 });

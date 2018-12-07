@@ -53,10 +53,8 @@
 </table>
 <script type="text/javascript">
 $(function(){
-	seajs.use('app_kelas',function(){
-		if(typeof $.app_kelas === 'undefined'){
-			$.app_kelas = new App_kelas('<?=site_url('app_kelas')?>','isian_kelas');
-		}
-	});
+	if(typeof $.app_kelas === 'undefined'){
+		$.app_kelas = new App_kelas('<?=site_url('app_kelas')?>','isian_kelas');
+	}
 });
 </script>

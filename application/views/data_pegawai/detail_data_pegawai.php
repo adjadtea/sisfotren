@@ -73,18 +73,16 @@ $status_pegawai = $this->config->item('status_pegawai');
 </div>
 <script type="text/javascript">
 $(function(){
-	seajs.use(['bootstrap-fileinput','bootstrap-fileinput-css'],function(){
-		$('#file_upload_photo_pegawai').fileinput({
-			browseClass: 'btn btn-primary waves-effect',
-			removeClass: 'btn btn-danger waves-effect',
-			uploadClass: 'btn btn-success waves-effect',
-			showUpload: true,
-			showRemove: true,
-			showCaption: false,
-			allowedFileExtensions: ['docx', 'doc','xls','xlsx', 'jpg', 'jpeg','png','gif','pdf'],
-			maxFilePreviewSize: (1024*2),//5 mega aja utl bisa preview klo kegedean bsa berat
-			maxFileSize: (1024*2.5),
-		});
+	$('#file_upload_photo_pegawai').fileinput({
+		browseClass: 'btn btn-primary waves-effect',
+		removeClass: 'btn btn-danger waves-effect',
+		uploadClass: 'btn btn-success waves-effect',
+		showUpload: true,
+		showRemove: true,
+		showCaption: false,
+		allowedFileExtensions: ['docx', 'doc','xls','xlsx', 'jpg', 'jpeg','png','gif','pdf'],
+		maxFilePreviewSize: (1024*2),//5 mega aja utl bisa preview klo kegedean bsa berat
+		maxFileSize: (1024*2.5),
 	});
 	//$.<?=$this->router->fetch_class()?>.validasi_upload('frmUploadPhotoPegawai',<?=$pegawai['id']?>);
 	$('#frmUploadPhotoPegawai').submit(function(){

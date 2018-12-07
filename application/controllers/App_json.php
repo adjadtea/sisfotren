@@ -18,20 +18,12 @@ class App_json extends CI_Controller {
 	}
 	public function json_pegawai_aktif(){
 		$this->load->model('m_data_pegawai');
-		$this->output->cache(6000);
 		header('Content-Type: application/json');
 		$data = array();
-		$arData = $this->m_data_pegawai->list_by_active(1);
+		$arData = $this->m_data_pegawai->list_all();
 		if(is_array($arData)){
 			if(count($arData) > 0){
-				foreach($arData as $vData){
-					$data[] = array(
-						'id'=>$vData['id'],
-						'nama'=>trim($vData['nama']),
-						'nip'=>trim($vData['nip']),
-					);
-				}
-				echo json_encode($data);
+				echo json_encode($arData);
 			} else echo '{}';
 		} else echo '{}';
 	}

@@ -19,7 +19,7 @@
 						<div class="col-sm-5 col-xs-12">
 							<div class="form-group">
 								<label class="form-label">Pimpinan/Kepala Sekolah</label>
-								<select name="cbPegawai" id="cbPegawai" class="form-control selectpicker" data-width="100%"></select>
+								<select name="cbPegawai" id="cbPegawai" class="form-control selectpicker"></select>
 							</div>
 						</div>
 						<div class="col-sm-6 col-xs-12">
@@ -66,8 +66,8 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default waves-effect waves-float" data-dismiss="modal"><i class="material-icons">clear</i> <span>Cancel</span></button>
-				<button type="button" class="btn btn-success waves-effect waves-float" onclick="javascript:$('#frmAddDataSekolah').submit();"><i class="material-icons">done</i> <span>Submit</span></button>
+				<button type="button" class="btn btn-link waves-effect" data-dismiss="modal"><i class="zmdi zmdi-close"></i> <span>Cancel</span></button>
+				<button type="button" class="btn btn-success waves-effect waves-float" onclick="javascript:$('#frmAddDataSekolah').submit();"><i class="zmdi zmdi-check"></i> <span>Submit</span></button>
 			</div>
 		</div>
 	</div>
@@ -75,21 +75,20 @@
 <script type="text/javascript">
 var is_clicked = 0;
 $(function(){
-	$.getJSON('<?=site_url('app_json/json_pegawai_aktif')?>',function(retval){
+	$.AdminBSB.input.activate();
+	axios.get('<?=site_url('app_json/json_pegawai_aktif')?>').then(function(retval){
 		var html = '';
-		$.each(retval,function(idx,nilai){
+		$.each(retval.data,function(idx,nilai){
 			html += '<option value="'+nilai.id+'">'+nilai.nama+'</option>';
 		});
-		seajs.use(['bootstrap-select-css','bootstrap-select'],function(){
-			$('#cbPegawai').append(html).selectpicker({
-				/*header:'Pilih Salah Satu',*/
-				size:5,
-				liveSearch:true,
-				liveSearchNormalize:true,
-				width:'css-width',
-			}).val(<?=$data_umum['kepala_sekolah']?>);
-			$('#cbPegawai').selectpicker('render');
-		});
+		$('#cbPegawai').append(html).selectpicker({
+			/*header:'Pilih Salah Satu',*/
+			size:5,
+			liveSearch:true,
+			liveSearchNormalize:true,
+			width:'css-width',
+		}).val(<?=$data_umum['kepala_sekolah']?>);
+		$('#cbPegawai').selectpicker('render');
 	});
 	$('#dlgAddDataSekolah').modal('show').on('hidden.bs.modal',function(){
 		if(is_clicked>0){
