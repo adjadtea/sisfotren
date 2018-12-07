@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-class App_data_pegawai extends CI_Controller {
+class Pegawai extends CI_Controller {
 	private $pegawai_id;
 	private $otoritas;
 	private $username;
@@ -22,8 +22,7 @@ class App_data_pegawai extends CI_Controller {
 		is_session_login();
 	}
 	public function load_js(){
-		header('Content-Type: application/javascript');
-		$this->load->view('data_pegawai/js');
+		minifyjs('data_pegawai/js');
 	}
 	public function index() {
 		$this->load->view('data_pegawai/list');

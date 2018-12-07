@@ -35,8 +35,7 @@ class App extends CI_Controller {
 		$this->m_user->add($arData);
 	}*/
 	public function load_js(){
-		header('Content-Type: application/javascript');
-		$this->load->view('template/js');
+		minifyjs('template/js');
 	}
 	public function load_login_js(){
 		minifyjs('template/login.js');

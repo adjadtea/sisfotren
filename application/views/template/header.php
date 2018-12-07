@@ -5,10 +5,8 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
 	<title><?=$this->config->item('client_name')?> | <?=$this->config->item('app_name')?></title>
 	<link href="<?=base_url('assets/css/normalize.min.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/adminbsb/css/roboto.css')?>" rel="stylesheet">
 	<link rel="icon" href="<?=base_url('assets/adminbsb/images/logos.png')?>">
-	<link href="<?=base_url('assets/adminbsb/plugins/bootstrap/css/bootstrap.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/css/style.min.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/css/themes/all-themes.css')?>" rel="stylesheet">
 </head>
 <body class="theme-teal">
 	<div class="page-loader-wrapper">

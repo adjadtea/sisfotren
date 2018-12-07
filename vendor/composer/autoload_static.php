@@ -17,6 +17,11 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
         ),
+        'M' => 
+        array (
+            'MatthiasMullie\\PathConverter\\' => 29,
+            'MatthiasMullie\\Minify\\' => 22,
+        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
@@ -31,6 +36,14 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'MatthiasMullie\\PathConverter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matthiasmullie/path-converter/src',
+        ),
+        'MatthiasMullie\\Minify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
         'Firebase\\JWT\\' => 
         array (

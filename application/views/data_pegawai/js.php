@@ -7,7 +7,8 @@ var <?=$this->router->fetch_class()?> = App.subclass({
 	load_data_pegawai:function(status_kerja){
 		var that = this;
 		$.app.tunggu('tab_pegawai_'+status_kerja,1);
-		$('#tab_pegawai_'+status_kerja).load(this.site_url+'/list_by_status_kerja/'+status_kerja,function(){
+		axios.get('<?=site_url('datapegawai/pegawai/list_by_status_kerja')?>/'+status_kerja).then((retval)=>{
+			$('#tab_pegawai_'+status_kerja).html(_.trim(retval.data));
 			$.app.tunggu('tab_pegawai_'+status_kerja,0);
 		});
 	},
@@ -19,7 +20,7 @@ var <?=$this->router->fetch_class()?> = App.subclass({
 		$('.row-container-detail-pegawai').remove();
 		if(vOpener=='<i class="material-icons">expand_more</i> Detail'){
 			$(elmRow).after(html);
-			$('#container_detail_data_pegawai').load(this.site_url+'/detail_data_pegawai/'+id);
+			$('#container_detail_data_pegawai').load('<?=site_url('datapegawai/pegawai/detail_data_pegawai')?>/'+id);
 			$('#btn_open_detail_'+id).html('<i class="material-icons">expand_less</i> Close');
 		} else {
 			$('#btn_open_detail_'+id).html('<i class="material-icons">expand_more</i> Detail');

@@ -71,7 +71,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#app_data_pegawai">
+				<a href="#datapegawai/pegawai">
 					<i class="material-icons">assignment_ind</i>
 					<span>Data Guru &amp; Staff</span>
 				</a>
