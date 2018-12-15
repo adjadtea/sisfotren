@@ -12,23 +12,45 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
     );
 
     public static $prefixLengthsPsr4 = array (
+        'k' => 
+        array (
+            'kartik\\plugins\\fileinput\\' => 25,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
+            'Symfony\\Component\\Process\\' => 26,
+            'Symfony\\Component\\OptionsResolver\\' => 34,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
         ),
         'M' => 
         array (
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
         ),
+        'L' => 
+        array (
+            'Luthier\\' => 8,
+        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
         ),
+        'D' => 
+        array (
+            'DebugBar\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'kartik\\plugins\\fileinput\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/bootstrap-fileinput',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -36,6 +58,18 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
+        'Symfony\\Component\\OptionsResolver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/options-resolver',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
         'MatthiasMullie\\PathConverter\\' => 
         array (
@@ -45,18 +79,40 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
+        'Luthier\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/luthier/luthier/src',
+        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
+        'DebugBar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar',
+        ),
     );
 
     public static $prefixesPsr0 = array (
+        'u' => 
+        array (
+            'utilphp\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/brandonwamboldt/utilphp/src',
+            ),
+        ),
         'o' => 
         array (
             'org\\bovigo\\vfs' => 
             array (
                 0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
+            ),
+        ),
+        'I' => 
+        array (
+            'ImageOptimizer' => 
+            array (
+                0 => __DIR__ . '/..' . '/ps/image-optimizer/src',
             ),
         ),
     );
@@ -76,6 +132,7 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
         'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
         'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
+        'yidas\\Psr4Autoload' => __DIR__ . '/..' . '/yidas/codeigniter-psr4-autoload/src/Psr4Autoload.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

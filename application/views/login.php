@@ -10,7 +10,7 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<title><?php echo $this->config->item('client_name')?> | <?php echo $this->config->item('app_name')?></title>
 	<link rel="icon" href="<?=base_url('assets/adminbsb/images/logos.png')?>">
-	<link href="<?=base_url('assets/css/normalize.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/css/normalize.min.css')?>" rel="stylesheet">
 	<link href="<?=base_url('assets/adminbsb/css/roboto.css')?>" rel="stylesheet">
 	<link href="<?=base_url('assets/adminbsb/plugins/material-icons/material-icons.css')?>" rel="stylesheet">
 	<link href="<?=base_url('assets/adminbsb/plugins/material-design-iconic-font/css/material-design-iconic-font.min.css')?>" rel="stylesheet">
@@ -86,7 +86,7 @@
 	<div class="col-sm-3 col-xs-12" id="kotakLogin">
 		<div class="card">
 			<div class="body bg-white">
-				<form id="frmLogin">
+				<form id="frmLogin" method="post" action="<?=base_url('app/check_login')?>">
 					<div class="img-logo-2 align-center">
 						<img src="<?=base_url('assets/adminbsb/images/logos.png')?>" class="" width="250px"/>
 					</div>
@@ -98,7 +98,7 @@
 							<i class="material-icons">person</i>
 						</span>
 						<div class="form-line">
-							<input type="email" class="form-control" name="txtNama" id="txtNama" placeholder="Username">
+							<input type="text" class="form-control" name="txtNama" id="txtNama" placeholder="Username">
 						</div>
 					</div>
 					<div class="input-group">
@@ -112,7 +112,7 @@
 					<div class="input-group text-center">
 						<img src="" id="imgCaptcha">
 						<span class="input-group-addon">
-							<button type="button" class="btn bg-cyan waves-effect waves-float" onclick="javascript:$.login.load_captcha('imgCaptcha');">
+							<button type="button" class="btn bg-cyan waves-effect waves-float" onclick="javascript:$.login.load_captcha('#imgCaptcha');">
 								<i class="material-icons">autorenew</i>
 							</button>
 						</span>
@@ -134,8 +134,12 @@
 			</div>
 		</div>
 	</div>
+	<script src="<?=base_url('assets/js/bluebird.min.js')?>"></script>
+	<script src="<?=base_url('assets/js/lodash.min.js')?>"></script>
+	<script src="<?=base_url('assets/js/load.js')?>"></script>
 	<script src="<?=base_url('assets/adminbsb/plugins/jquery/jquery.min.js')?>"></script>
 	<script src="<?=base_url('assets/adminbsb/plugins/bootstrap/js/bootstrap.js')?>"></script>
+	<script src="<?=base_url('assets/js/jquery.backstretch.min.js')?>"></script>
 	<script src="<?=base_url('assets/adminbsb/plugins/waves/waves.min.js')?>"></script>
 	<script src="<?=base_url('assets/adminbsb/plugins/jquery-validation/jquery.validate.js')?>"></script>
 	<script src="<?=base_url('assets/js/waitme/waitMe.min.js')?>"></script>
@@ -143,22 +147,30 @@
 	<script src="<?=base_url('assets/js/stapes.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/jquery.form.min.js')?>"></script>
 	<script src="<?=base_url('assets/adminbsb/js/admin.min.js')?>"></script>
-	<!--<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPg2ckMeX9gmlfTjzLoytP7L0NVnODamM&sensor=false"></script>-->
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCPg2ckMeX9gmlfTjzLoytP7L0NVnODamM"></script>
-	<script src="<?=base_url('assets/js/gmaps.js')?>"></script>
 	<script>
 	var _alert;
 	$(function(){
-		$.getScript('<?=site_url($this->router->fetch_class().'/load_login_js')?>',function(){
-			$.login = new Login('<?=site_url('app')?>','frmLogin','imgCaptcha');
+		load.js('<?=base_url('app/load_login_js')?>').then(()=>{
+			$.login = new Login('<?=site_url('app')?>','#imgCaptcha');
+		}).catch((err)=>{
+			console.log(err);
 		});
-		var tinggi = $(window).height();
+		$('#frmLogin').submit(function(e){
+			e.preventDefault();
+			$.login.form_login_submit('#frmLogin');
+		});
+		var ArSlide = [
+			'<?=base_url('assets/adminbsb/images/slide/slide02.jpg')?>',
+			'<?=base_url('assets/adminbsb/images/slide/slide04.jpg')?>',
+		];
+		$.backstretch(ArSlide,{duration: 5000, fade: 1000});
+		/*var tinggi = $(window).height();
 		$('#streetView').css({'height':tinggi});
 		panorama = GMaps.createPanorama({
 			el: '#streetView',
 			lat : -6.4041148,
 			lng : 106.7355836
-		});
+		});*/
 	});
 	</script>
 </body>

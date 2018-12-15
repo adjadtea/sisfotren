@@ -15,3 +15,5 @@ $config['jenjang_pendidikan'] = array('1'=>'SD','2'=>'SLTP','3'=>'SLTA','4'=>'S1
 $config['jenis_alamat'] = array('1'=>'Alamat Tinggal Sekarang','2'=>'Alamat Orang Tua','3'=>'Alamat Keluarga Lainnya','4'=>'Alamat Lainnya');
 $config['status_pernikahan'] = array('1'=>'Pasangan Saat Ini','2'=>'Cerai','3'=>'Cerai Mati');
 $config['status_santri'] = array('0'=>'Calon Santri','1'=>'Masuk Tahun Ajaran Baru','2'=>'Masuk Pertengahan Tahun Ajaran','3'=>'Lulus','4'=>'Keluar/Pindah');
+
+class_alias('utilphp\util', 'util');

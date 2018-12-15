@@ -35,7 +35,10 @@ class App extends CI_Controller {
 		$this->m_user->add($arData);
 	}*/
 	public function load_js(){
-		minifyjs('template/js');
+		minifyjs('template/main.js');
+	}
+	public function load_all_js(){
+		minifyjs('template/load_all.js');
 	}
 	public function load_login_js(){
 		minifyjs('template/login.js');
@@ -72,48 +75,16 @@ class App extends CI_Controller {
 		}
 	}
 	public function create_captcha($vrand){
-		$string = random_string('numeric',7);
-		$this->session->set_userdata('random_number',$string);
-		$image = imagecreatetruecolor(160, 55);
-		// random number 1 or 2
-		$num = rand(1,6);
-		switch($num){
-			case 1:
-				$font = "bevan.ttf";
-				break;
-			case 2:
-				$font = "great.ttf";
-				break;
-			case 3:
-				$font = "capture_it_2.ttf";
-				break;
-			case 4:
-				$font = "bearpaw.ttf";
-				break;
-			case 5:
-				$font = "blackcasper.ttf";
-				break;
-			default:
-				$font = "molot.otf";
-				break;
-		}
-		// random number 1 or 2
-		$num2 = rand(1,2);
-		$color = imagecolorallocate($image, rand(0, 100), rand(0, 100), rand(0, 100));// color
-		$warna = imagecolorallocate($image, rand(200, 255), rand(0, 255), rand(200, 255)); // background color white
-		imagefilledrectangle($image,0,0,399,99,$warna);
-		imagettftext ($image, 30, 0, 10, 40, $color, $this->config->item('font_directory').$font, $this->session->userdata('random_number'));
-		header("Content-type: image/png");
-		imagepng($image);
+		createcaptcha('random_number');
 	}
 	public function check_login(){
 		$arModel = array('m_user');
 		$this->load->model($arModel);
 		
-		$nilai_random = $this->session->userdata('random_number');
-		$captcha = trim($this->input->get_post('txtCaptcha',true));
-		$username = trim($this->input->get_post('txtNama',true));
-		$password = trim($this->input->get_post('txtPassword',true));
+		$nilai_random = util::sanitize_string($this->session->userdata('random_number'));
+		$captcha = util::sanitize_string($this->input->get_post('txtCaptcha',true));
+		$username = util::sanitize_string($this->input->get_post('txtNama',true));
+		$password = util::sanitize_string($this->input->get_post('txtPassword',true));
 		if($nilai_random==$captcha){
 			$jml = $this->m_user->check_login($username);
 			if($jml > 0){
@@ -157,7 +128,7 @@ class App extends CI_Controller {
 		} else {
 			$data = array(
 				'status'=>0,
-				'pesan'=>'Kode Captcha Salah'
+				'pesan'=>'Kode Captcha Salah:yang bener:'.$nilai_random
 			);
 		}
 		header('Content-Type: application/json');

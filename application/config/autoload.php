@@ -97,7 +97,7 @@ $autoload['helper'] = array(
 	/* CI native helper */
 	'url','number','string',
 	/* custome helper */
-	'checksession','tglindonesia','kuncikreator','minifyjs'
+	'checksession','tglindonesia','kuncikreator','minifyjs','createcaptcha',
 	);
 
 /*

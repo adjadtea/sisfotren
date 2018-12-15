@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'utilphp\\' => array($vendorDir . '/brandonwamboldt/utilphp/src'),
     'org\\bovigo\\vfs' => array($vendorDir . '/mikey179/vfsStream/src/main/php'),
+    'ImageOptimizer' => array($vendorDir . '/ps/image-optimizer/src'),
 );

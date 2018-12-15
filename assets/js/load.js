@@ -39,6 +39,8 @@ var load = (function() {
 				}
 				element[attr] = url;
 				document[parent].appendChild(element);
+			}).catch((err)=>{
+				console.log(err);
 			});
 		};
 	}
