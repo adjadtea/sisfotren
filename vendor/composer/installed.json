@@ -102,15 +102,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-            "reference": "c3e9f9fb6559956eb1985b37d70f724e94ff9a68"
+            "reference": "80ea0aae52406911519c602978e4e51150c7bab7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/c3e9f9fb6559956eb1985b37d70f724e94ff9a68",
-            "reference": "c3e9f9fb6559956eb1985b37d70f724e94ff9a68",
+            "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/80ea0aae52406911519c602978e4e51150c7bab7",
+            "reference": "80ea0aae52406911519c602978e4e51150c7bab7",
             "shasum": ""
         },
-        "time": "2018-12-07T09:29:48+00:00",
+        "time": "2019-01-03T02:58:32+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -449,28 +449,28 @@
     },
     {
         "name": "ps/image-optimizer",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "1.2.1",
+        "version_normalized": "1.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/psliwa/image-optimizer.git",
-            "reference": "72620751d99b7ab0f5e32685a7689cc99e46a82a"
+            "reference": "fbe41e4fd67d8e9675c5437441080e44f5d5e5f6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/psliwa/image-optimizer/zipball/72620751d99b7ab0f5e32685a7689cc99e46a82a",
-            "reference": "72620751d99b7ab0f5e32685a7689cc99e46a82a",
+            "url": "https://api.github.com/repos/psliwa/image-optimizer/zipball/fbe41e4fd67d8e9675c5437441080e44f5d5e5f6",
+            "reference": "fbe41e4fd67d8e9675c5437441080e44f5d5e5f6",
             "shasum": ""
         },
         "require": {
-            "psr/log": "1.0.*",
+            "psr/log": "^1.0",
             "symfony/options-resolver": "~2.1 | ~3.0 | ~4.0",
             "symfony/process": "~2.0 | ~3.0 | ~4.0"
         },
         "require-dev": {
             "phpunit/phpunit": "^5.0"
         },
-        "time": "2018-04-11T21:27:34+00:00",
+        "time": "2018-12-17T20:01:36+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -500,23 +500,23 @@
     },
     {
         "name": "psr/log",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-fig/log.git",
-            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+            "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2016-10-10T12:19:37+00:00",
+        "time": "2018-11-20T15:27:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -549,23 +549,23 @@
     },
     {
         "name": "symfony/options-resolver",
-        "version": "v3.4.20",
-        "version_normalized": "3.4.20.0",
+        "version": "v3.4.21",
+        "version_normalized": "3.4.21.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/options-resolver.git",
-            "reference": "2cf5aa084338c1f67166013aebe87e2026bbe953"
+            "reference": "8a10e36ffd04c0c551051594952304d34ecece71"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/2cf5aa084338c1f67166013aebe87e2026bbe953",
-            "reference": "2cf5aa084338c1f67166013aebe87e2026bbe953",
+            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/8a10e36ffd04c0c551051594952304d34ecece71",
+            "reference": "8a10e36ffd04c0c551051594952304d34ecece71",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2018-11-11T19:48:54+00:00",
+        "time": "2019-01-01T13:45:19+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -666,23 +666,23 @@
     },
     {
         "name": "symfony/process",
-        "version": "v3.4.20",
-        "version_normalized": "3.4.20.0",
+        "version": "v3.4.21",
+        "version_normalized": "3.4.21.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/process.git",
-            "reference": "abb46b909dd6ba0b50e10d4c10ffe6ee96dd70f2"
+            "reference": "0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/process/zipball/abb46b909dd6ba0b50e10d4c10ffe6ee96dd70f2",
-            "reference": "abb46b909dd6ba0b50e10d4c10ffe6ee96dd70f2",
+            "url": "https://api.github.com/repos/symfony/process/zipball/0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c",
+            "reference": "0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2018-11-20T16:10:26+00:00",
+        "time": "2019-01-02T21:24:08+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -717,17 +717,17 @@
     },
     {
         "name": "symfony/var-dumper",
-        "version": "v3.4.20",
-        "version_normalized": "3.4.20.0",
+        "version": "v3.4.21",
+        "version_normalized": "3.4.21.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/var-dumper.git",
-            "reference": "6867713afe6c50ade2f34ed6435563b065a52145"
+            "reference": "a5f39641bb62e8b74e343467b145331273f615a2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6867713afe6c50ade2f34ed6435563b065a52145",
-            "reference": "6867713afe6c50ade2f34ed6435563b065a52145",
+            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a5f39641bb62e8b74e343467b145331273f615a2",
+            "reference": "a5f39641bb62e8b74e343467b145331273f615a2",
             "shasum": ""
         },
         "require": {
@@ -746,7 +746,7 @@
             "ext-intl": "To show region name in time zone dump",
             "ext-symfony_debug": ""
         },
-        "time": "2018-11-20T16:10:26+00:00",
+        "time": "2019-01-01T13:45:19+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
