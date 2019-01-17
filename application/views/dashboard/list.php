@@ -33,7 +33,7 @@
 $(function(){
 	var site_url = '<?=site_url()?>', controller = '<?=$this->router->fetch_class()?>',site_controller = site_url+'/'+controller+'/load_js';
 	if(typeof <?=$this->router->fetch_class()?> == 'undefined'){
-		$.app.load_controller_script(site_controller,function(){
+		load.js('<?=route('dashboardjs')?>').then(()=>{
 			$.<?=$this->router->fetch_class()?> = new <?=$this->router->fetch_class()?>('<?=site_url($this->router->fetch_class())?>');
 			$.<?=$this->router->fetch_class()?>.load_umum();
 			$.<?=$this->router->fetch_class()?>.load_data('sd');

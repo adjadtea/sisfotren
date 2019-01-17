@@ -11,7 +11,7 @@ var Login = Stapes.subclass({
 		};
 	},
 	load_captcha : function() {
-		$(this.imgId).attr('src',this.app_path+'/create_captcha/'+_.random(0,1000));
+		$(this.imgId).attr('src','<?=route('captcha')?>/'+_.random(1,1000));
 	},
 	form_login_submit:function(frmId){
 		var that = this;

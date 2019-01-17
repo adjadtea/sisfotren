@@ -9,17 +9,17 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<title><?php echo $this->config->item('client_name')?> | <?php echo $this->config->item('app_name')?></title>
-	<link rel="icon" href="<?=base_url('assets/adminbsb/images/logos.png')?>">
+	<link rel="icon" href="<?=base_url('assets/images/logos.png')?>">
 	<link href="<?=base_url('assets/css/normalize.min.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/css/roboto.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/plugins/material-icons/material-icons.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/plugins/material-design-iconic-font/css/material-design-iconic-font.min.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/plugins/animate-css/animate.css')?>" rel="stylesheet" />
-	<link href="<?=base_url('assets/adminbsb/plugins/bootstrap/css/bootstrap.css')?>" rel="stylesheet">
-	<link href="<?=base_url('assets/adminbsb/plugins/waves/waves.min.css')?>" rel="stylesheet" />
+	<link href="<?=base_url('assets/css/roboto.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/plugins/material-icons/material-icons.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/plugins/material-design-iconic-font/css/material-design-iconic-font.min.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/plugins/animate-css/animate.css')?>" rel="stylesheet" />
+	<link href="<?=base_url('assets/plugins/bootstrap/css/bootstrap.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/plugins/waves/waves.min.css')?>" rel="stylesheet" />
 	<link href="<?=base_url('assets/js/waitme/waitMe.min.css')?>" rel="stylesheet" />
-	<link href="<?=base_url('assets/adminbsb/css/materialize.css')?>" rel="stylesheet" />
-	<link href="<?=base_url('assets/adminbsb/css/style.min.css')?>" rel="stylesheet">
+	<link href="<?=base_url('assets/css/materialize.css')?>" rel="stylesheet" />
+	<link href="<?=base_url('assets/css/style.min.css')?>" rel="stylesheet">
 	<style type="text/css">
 	.img-logo-2{
 		display:none;
@@ -80,15 +80,15 @@
 </head>
 <body class="">
 	<div class="img-logo">
-		<img src="<?=base_url('assets/adminbsb/images/logos.png')?>" class="img-responsive"/>
+		<img src="<?=base_url('assets/images/logos.png')?>" class="img-responsive"/>
 	</div>
 	<div id="streetView"></div>
 	<div class="col-sm-3 col-xs-12" id="kotakLogin">
 		<div class="card">
 			<div class="body bg-white">
-				<form id="frmLogin" method="post" action="<?=base_url('app/check_login')?>">
+				<form id="frmLogin" method="post" action="<?=route('checklogin')?>">
 					<div class="img-logo-2 align-center">
-						<img src="<?=base_url('assets/adminbsb/images/logos.png')?>" class="" width="250px"/>
+						<img src="<?=base_url('assets/images/logos.png')?>" class="" width="250px"/>
 					</div>
 					<div class="msg font-42 align-center">
 						<h4><?php echo $this->config->item('app_name')?></h4>
@@ -137,20 +137,20 @@
 	<script src="<?=base_url('assets/js/bluebird.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/lodash.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/load.js')?>"></script>
-	<script src="<?=base_url('assets/adminbsb/plugins/jquery/jquery.min.js')?>"></script>
-	<script src="<?=base_url('assets/adminbsb/plugins/bootstrap/js/bootstrap.js')?>"></script>
+	<script src="<?=base_url('assets/plugins/jquery/jquery.min.js')?>"></script>
+	<script src="<?=base_url('assets/plugins/bootstrap/js/bootstrap.js')?>"></script>
 	<script src="<?=base_url('assets/js/jquery.backstretch.min.js')?>"></script>
-	<script src="<?=base_url('assets/adminbsb/plugins/waves/waves.min.js')?>"></script>
-	<script src="<?=base_url('assets/adminbsb/plugins/jquery-validation/jquery.validate.js')?>"></script>
+	<script src="<?=base_url('assets/plugins/waves/waves.min.js')?>"></script>
+	<script src="<?=base_url('assets/plugins/jquery-validation/jquery.validate.js')?>"></script>
 	<script src="<?=base_url('assets/js/waitme/waitMe.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/notify.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/stapes.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/jquery.form.min.js')?>"></script>
-	<script src="<?=base_url('assets/adminbsb/js/admin.min.js')?>"></script>
+	<script src="<?=base_url('assets/js/admin.min.js')?>"></script>
 	<script>
 	var _alert;
 	$(function(){
-		load.js('<?=base_url('app/load_login_js')?>').then(()=>{
+		load.js('<?=route('login_js')?>').then(()=>{
 			$.login = new Login('<?=site_url('app')?>','#imgCaptcha');
 		}).catch((err)=>{
 			console.log(err);
@@ -160,8 +160,8 @@
 			$.login.form_login_submit('#frmLogin');
 		});
 		var ArSlide = [
-			'<?=base_url('assets/adminbsb/images/slide/slide02.jpg')?>',
-			'<?=base_url('assets/adminbsb/images/slide/slide04.jpg')?>',
+			'<?=base_url('assets/images/slide/slide02.jpg')?>',
+			'<?=base_url('assets/images/slide/slide04.jpg')?>',
 		];
 		$.backstretch(ArSlide,{duration: 5000, fade: 1000});
 		/*var tinggi = $(window).height();

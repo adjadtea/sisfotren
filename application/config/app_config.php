@@ -17,3 +17,4 @@ $config['status_pernikahan'] = array('1'=>'Pasangan Saat Ini','2'=>'Cerai','3'=>
 $config['status_santri'] = array('0'=>'Calon Santri','1'=>'Masuk Tahun Ajaran Baru','2'=>'Masuk Pertengahan Tahun Ajaran','3'=>'Lulus','4'=>'Keluar/Pindah');
 
 class_alias('utilphp\util', 'util');
+class_alias('Luthier\Debug', 'Debug');

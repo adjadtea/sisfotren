@@ -75,7 +75,7 @@ var App = Stapes.subclass({
 				});
 			});
 			this.get('', function () {
-				this.app.runRoute('get', '#app_dashboard');
+				this.app.runRoute('get', '#dashboard');
 			});
 		});
 		that.router_aplikasi.run();

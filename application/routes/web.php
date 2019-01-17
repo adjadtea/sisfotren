@@ -19,7 +19,15 @@
  */
 
 Route::get('/','app@index')->name('app');
+Route::post('checklogin','app@check_login')->name('checklogin');
+Route::get('captcha/{apaaja?}','app@create_captcha')->name('captcha');
 Route::get('login_js','app@load_login_js')->name('login_js');
+Route::get('loadall_js','app@load_all_js')->name('loadalljs');
+Route::get('loadjs','app@load_js')->name('loadjs');
+Route::get('logout','app@logout')->name('logout');
+
+Route::get('dashboard','app_dashboard@index')->name('dashboard');
+Route::get('dashboardjs','app_dashboard@load_js')->name('dashboardjs');
 
 Route::set('404_override', function(){
     show_404();
