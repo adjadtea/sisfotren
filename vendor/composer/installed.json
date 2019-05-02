@@ -102,19 +102,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-            "reference": "80ea0aae52406911519c602978e4e51150c7bab7"
+            "reference": "a70aae434ec90ea923393c7f94cce70cd902464d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/80ea0aae52406911519c602978e4e51150c7bab7",
-            "reference": "80ea0aae52406911519c602978e4e51150c7bab7",
+            "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/a70aae434ec90ea923393c7f94cce70cd902464d",
+            "reference": "a70aae434ec90ea923393c7f94cce70cd902464d",
             "shasum": ""
         },
-        "time": "2019-01-03T02:58:32+00:00",
+        "time": "2019-04-26T05:32:43+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.5.x-dev"
+                "dev-master": "5.0.x-dev"
             }
         },
         "installation-source": "source",
@@ -383,12 +383,12 @@
         "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/mikey179/vfsStream.git",
+            "url": "https://github.com/bovigo/vfsStream.git",
             "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
+            "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
             "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
             "shasum": ""
         },
@@ -549,23 +549,23 @@
     },
     {
         "name": "symfony/options-resolver",
-        "version": "v3.4.21",
-        "version_normalized": "3.4.21.0",
+        "version": "v3.4.27",
+        "version_normalized": "3.4.27.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/options-resolver.git",
-            "reference": "8a10e36ffd04c0c551051594952304d34ecece71"
+            "reference": "ed3b397f9c07c8ca388b2a1ef744403b4d4ecc44"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/8a10e36ffd04c0c551051594952304d34ecece71",
-            "reference": "8a10e36ffd04c0c551051594952304d34ecece71",
+            "url": "https://api.github.com/repos/symfony/options-resolver/zipball/ed3b397f9c07c8ca388b2a1ef744403b4d4ecc44",
+            "reference": "ed3b397f9c07c8ca388b2a1ef744403b4d4ecc44",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2019-01-01T13:45:19+00:00",
+        "time": "2019-04-10T16:00:48+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -605,17 +605,17 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.10.0",
-        "version_normalized": "1.10.0.0",
+        "version": "v1.11.0",
+        "version_normalized": "1.11.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+            "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-            "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+            "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
             "shasum": ""
         },
         "require": {
@@ -624,11 +624,11 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2018-09-21T13:07:52+00:00",
+        "time": "2019-02-06T07:57:58+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.9-dev"
+                "dev-master": "1.11-dev"
             }
         },
         "installation-source": "dist",
@@ -666,23 +666,23 @@
     },
     {
         "name": "symfony/process",
-        "version": "v3.4.21",
-        "version_normalized": "3.4.21.0",
+        "version": "v3.4.27",
+        "version_normalized": "3.4.27.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/process.git",
-            "reference": "0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c"
+            "reference": "a9c4dfbf653023b668c282e4e02609d131f4057a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/process/zipball/0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c",
-            "reference": "0d41dd7d95ed179aed6a13393b0f4f97bfa2d25c",
+            "url": "https://api.github.com/repos/symfony/process/zipball/a9c4dfbf653023b668c282e4e02609d131f4057a",
+            "reference": "a9c4dfbf653023b668c282e4e02609d131f4057a",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2019-01-02T21:24:08+00:00",
+        "time": "2019-04-08T16:15:54+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -717,17 +717,17 @@
     },
     {
         "name": "symfony/var-dumper",
-        "version": "v3.4.21",
-        "version_normalized": "3.4.21.0",
+        "version": "v3.4.27",
+        "version_normalized": "3.4.27.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/var-dumper.git",
-            "reference": "a5f39641bb62e8b74e343467b145331273f615a2"
+            "reference": "ca5fef348a0440411bbca0f9ec14e9a11625bd6a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a5f39641bb62e8b74e343467b145331273f615a2",
-            "reference": "a5f39641bb62e8b74e343467b145331273f615a2",
+            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ca5fef348a0440411bbca0f9ec14e9a11625bd6a",
+            "reference": "ca5fef348a0440411bbca0f9ec14e9a11625bd6a",
             "shasum": ""
         },
         "require": {
@@ -746,7 +746,7 @@
             "ext-intl": "To show region name in time zone dump",
             "ext-symfony_debug": ""
         },
-        "time": "2019-01-01T13:45:19+00:00",
+        "time": "2019-05-01T09:52:10+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
