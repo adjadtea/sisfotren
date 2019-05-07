@@ -96,88 +96,34 @@
         "homepage": "https://github.com/firebase/php-jwt"
     },
     {
-        "name": "kartik-v/bootstrap-fileinput",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "klein/klein",
+        "version": "v2.1.2",
+        "version_normalized": "2.1.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-            "reference": "a70aae434ec90ea923393c7f94cce70cd902464d"
+            "url": "https://github.com/klein/klein.php.git",
+            "reference": "6549676cc831b9417332b3d9485c64bbf7bac728"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/a70aae434ec90ea923393c7f94cce70cd902464d",
-            "reference": "a70aae434ec90ea923393c7f94cce70cd902464d",
-            "shasum": ""
-        },
-        "time": "2019-04-26T05:32:43+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.0.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "kartik\\plugins\\fileinput\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
-            }
-        ],
-        "description": "An enhanced HTML 5 file input for Bootstrap 3.x with features for file preview for many file types, multiple selection, ajax uploads, and more.",
-        "homepage": "https://github.com/kartik-v/bootstrap-fileinput",
-        "keywords": [
-            "ajax",
-            "bootstrap",
-            "delete",
-            "file",
-            "image",
-            "input",
-            "jquery",
-            "multiple",
-            "preview",
-            "progress",
-            "upload"
-        ]
-    },
-    {
-        "name": "luthier/luthier",
-        "version": "v1.0.5",
-        "version_normalized": "1.0.5.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ingeniasoftware/luthier-ci.git",
-            "reference": "10d71b22d623de3873acaec0f5db548d794f4fa7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ingeniasoftware/luthier-ci/zipball/10d71b22d623de3873acaec0f5db548d794f4fa7",
-            "reference": "10d71b22d623de3873acaec0f5db548d794f4fa7",
+            "url": "https://api.github.com/repos/klein/klein.php/zipball/6549676cc831b9417332b3d9485c64bbf7bac728",
+            "reference": "6549676cc831b9417332b3d9485c64bbf7bac728",
             "shasum": ""
         },
         "require": {
-            "maximebf/debugbar": "~1.0",
-            "php": ">=5.6.0"
+            "php": ">=5.3.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "7"
+            "phpunit/php-code-coverage": "^2.2",
+            "phpunit/phpunit": "^4.8",
+            "squizlabs/php_codesniffer": "1.4.8"
         },
-        "time": "2018-09-27T17:41:30+00:00",
+        "time": "2017-02-01T23:08:58+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Luthier\\": "src/"
+                "Klein\\": "src/Klein/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -186,19 +132,25 @@
         ],
         "authors": [
             {
-                "name": "Anderson Salas",
-                "email": "anderson@ingenia.me",
-                "homepage": "https://ingenia.me",
-                "role": "Lead developer"
+                "name": "Chris O'Hara",
+                "email": "cohara87@gmail.com",
+                "homepage": "http://chris6f.com/",
+                "role": "Creator/Developer"
+            },
+            {
+                "name": "Trevor Suarez",
+                "email": "rican7@gmail.com",
+                "homepage": "https://trevorsuarez.com/",
+                "role": "Contributor/Developer"
             }
         ],
-        "description": "Improved routing, middleware support, authentication tools and more for CodeIgniter 3 framework",
-        "homepage": "https://luthier.ingenia.me/ci/en/",
+        "description": "A lightning fast router for PHP",
+        "homepage": "https://github.com/klein/klein.php",
         "keywords": [
-            "codeigniter",
-            "luthier",
-            "middleware",
-            "routing"
+            "boilerplate",
+            "router",
+            "routing",
+            "sinatra"
         ]
     },
     {
@@ -315,98 +267,51 @@
         ]
     },
     {
-        "name": "maximebf/debugbar",
-        "version": "v1.15.0",
-        "version_normalized": "1.15.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/maximebf/php-debugbar.git",
-            "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
-            "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0",
-            "psr/log": "^1.0",
-            "symfony/var-dumper": "^2.6|^3.0|^4.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.0|^5.0"
-        },
-        "suggest": {
-            "kriswallsmith/assetic": "The best way to manage assets",
-            "monolog/monolog": "Log using Monolog",
-            "predis/predis": "Redis storage"
-        },
-        "time": "2017-12-15T11:13:46+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.14-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "DebugBar\\": "src/DebugBar/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Maxime Bouroumeau-Fuseau",
-                "email": "maxime.bouroumeau@gmail.com",
-                "homepage": "http://maximebf.com"
-            },
-            {
-                "name": "Barry vd. Heuvel",
-                "email": "barryvdh@gmail.com"
-            }
-        ],
-        "description": "Debug bar in the browser for php application",
-        "homepage": "https://github.com/maximebf/php-debugbar",
-        "keywords": [
-            "debug",
-            "debugbar"
-        ]
-    },
-    {
         "name": "mikey179/vfsStream",
-        "version": "v1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "v1.6.6",
+        "version_normalized": "1.6.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/bovigo/vfsStream.git",
-            "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e"
+            "reference": "095238a0711c974ae5b4ebf4c4534a23f3f6c99d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
-            "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
+            "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/095238a0711c974ae5b4ebf4c4534a23f3f6c99d",
+            "reference": "095238a0711c974ae5b4ebf4c4534a23f3f6c99d",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2012-08-25T12:49:29+00:00",
+        "require-dev": {
+            "phpunit/phpunit": "~4.5"
+        },
+        "time": "2019-04-08T13:54:32+00:00",
         "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.6.x-dev"
+            }
+        },
         "installation-source": "dist",
         "autoload": {
             "psr-0": {
-                "org\\bovigo\\vfs": "src/main/php"
+                "org\\bovigo\\vfs\\": "src/main/php"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD"
+            "BSD-3-Clause"
         ],
+        "authors": [
+            {
+                "name": "Frank Kleine",
+                "homepage": "http://frankkleine.de/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Virtual file system to mock the real file system in unit tests.",
         "homepage": "http://vfs.bovigo.org/"
     },
     {

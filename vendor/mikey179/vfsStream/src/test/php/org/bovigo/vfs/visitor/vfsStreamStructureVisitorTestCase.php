@@ -35,6 +35,20 @@ class vfsStreamStructureVisitorTestCase extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
+    public function visitFileCreatesStructureForBlock()
+    {
+        $structureVisitor = new vfsStreamStructureVisitor();
+        $this->assertEquals(array('[foo]' => 'test'),
+                            $structureVisitor->visitBlockDevice(vfsStream::newBlock('foo')
+                                                                  ->withContent('test')
+                                               )
+                                             ->getStructure()
+        );
+    }
+
+    /**
+     * @test
+     */
     public function visitDirectoryCreatesStructureForDirectory()
     {
         $structureVisitor = new vfsStreamStructureVisitor();
@@ -69,4 +83,3 @@ class vfsStreamStructureVisitorTestCase extends \PHPUnit_Framework_TestCase
         );
     }
 }
-?>

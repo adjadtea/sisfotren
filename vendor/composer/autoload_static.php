@@ -12,10 +12,6 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
     );
 
     public static $prefixLengthsPsr4 = array (
-        'k' => 
-        array (
-            'kartik\\plugins\\fileinput\\' => 25,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -32,25 +28,17 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
         ),
-        'L' => 
+        'K' => 
         array (
-            'Luthier\\' => 8,
+            'Klein\\' => 6,
         ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
         ),
-        'D' => 
-        array (
-            'DebugBar\\' => 9,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'kartik\\plugins\\fileinput\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/bootstrap-fileinput',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -79,17 +67,13 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
-        'Luthier\\' => 
+        'Klein\\' => 
         array (
-            0 => __DIR__ . '/..' . '/luthier/luthier/src',
+            0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
         ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
-        ),
-        'DebugBar\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar',
         ),
     );
 
@@ -103,7 +87,7 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         ),
         'o' => 
         array (
-            'org\\bovigo\\vfs' => 
+            'org\\bovigo\\vfs\\' => 
             array (
                 0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
             ),
