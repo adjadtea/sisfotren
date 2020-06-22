@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+namespace app\helpers;
+defined('BASEPATH') OR exit('No direct script access allowed');
 class passwordutil{
 	function create_password($string){
 		$CI =& get_instance();

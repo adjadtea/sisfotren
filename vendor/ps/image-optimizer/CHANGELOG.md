@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+* 1.2.2 (2019-06-21)
+
+  * [#58] Easy way to add custom optimizers.
+  * [#57] Clear error message when "exec" function is not available.
+
 * 1.2.1 (2018-12-17)
 
   * [#64] Bump psr/log version to 1.*

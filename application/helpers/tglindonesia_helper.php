@@ -1,4 +1,6 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+namespace app\helpers;
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class tanggal{
 	function tglindonesia($tgl,$is_full=0){
 		$date = new DateTime($tgl);

@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed.');
+<?php
+namespace app\helpers;
+defined('BASEPATH') OR exit('No direct script access allowed.');
 if (!function_exists('createcaptcha')) {
 	function createcaptcha($nama_session){
 		$ci =& get_instance();

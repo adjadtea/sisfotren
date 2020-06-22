@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+namespace app\helpers;
+defined('BASEPATH') OR exit('No direct script access allowed');
 if(!function_exists('minifyjs')){
 	function minifyjs($strView,$data=''){
 		$ci =& get_instance();

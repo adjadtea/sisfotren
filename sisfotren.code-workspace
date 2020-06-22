@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "public_html — (Remote)",
+			"uri": "sftp://umrah_restapi/"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

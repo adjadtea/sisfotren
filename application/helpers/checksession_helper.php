@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+namespace app\helpers;
+defined('BASEPATH') OR exit('No direct script access allowed');
 class checksession {
 	function is_session_started() {
 		if ( php_sapi_name() !== 'cli' ) {

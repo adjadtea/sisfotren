@@ -1,31 +1,20 @@
 {
     "description": "Sistem Informasi Pengelolaan Pondok Pesantren",
-    "name": "codeigniter/framework",
+    "name": "simpontren/adjad",
     "type": "project",
     "homepage": "https://codeigniter.com",
     "license": "MIT",
-    "support": {
-        "forum": "http://forum.codeigniter.com/",
-        "wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
-        "irc": "irc://irc.freenode.net/codeigniter",
-        "source": "https://github.com/bcit-ci/CodeIgniter"
-    },
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.6.0",
         "tecnickcom/tcpdf": "*",
         "firebase/php-jwt": "*",
         "matthiasmullie/minify": "*",
         "moxiecode/plupload": "*",
         "ps/image-optimizer": "*",
-        "yidas/codeigniter-psr4-autoload": "*",
-        "klein/klein": "*",
-        "brandonwamboldt/utilphp": "*"
-    },
-    "suggest": {
-        "paragonie/random_compat": "Provides better randomness in PHP 5.x"
+        "brandonwamboldt/utilphp": "*",
+        "paragonie/random_compat":"*"
     },
     "require-dev": {
-        "mikey179/vfsStream": "*",
-        "symfony/var-dumper": "*"
+        "mikey179/vfsstream": "*"
     }
 }

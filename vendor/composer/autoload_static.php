@@ -7,15 +7,12 @@ namespace Composer\Autoload;
 class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\OptionsResolver\\' => 34,
         ),
@@ -28,10 +25,6 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
             'MatthiasMullie\\PathConverter\\' => 29,
             'MatthiasMullie\\Minify\\' => 22,
         ),
-        'K' => 
-        array (
-            'Klein\\' => 6,
-        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
@@ -39,14 +32,6 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Component\\VarDumper\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/var-dumper',
-        ),
         'Symfony\\Component\\Process\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
@@ -67,10 +52,6 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         array (
             0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
         ),
-        'Klein\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/klein/klein/src/Klein',
-        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
@@ -89,7 +70,7 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         array (
             'org\\bovigo\\vfs\\' => 
             array (
-                0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
+                0 => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php',
             ),
         ),
         'I' => 
@@ -116,7 +97,6 @@ class ComposerStaticInit8aad01032368504e2fd4ac7e2bf0444f
         'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
         'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
         'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
-        'yidas\\Psr4Autoload' => __DIR__ . '/..' . '/yidas/codeigniter-psr4-autoload/src/Psr4Autoload.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
